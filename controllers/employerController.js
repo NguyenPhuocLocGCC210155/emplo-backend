@@ -4,7 +4,7 @@ exports.getAllEmployeesPre = async (req, res) => {
   try {
     const employees = await Employee.findAll({
       where: { role: "employee" },
-      attributes: ["id", "name", "email", "role" , "wage" , "hire_date" ]
+      attributes: ["id", "name", "email", "role" , "wage" , "day_off" ]
     });
     res.json(employees);
   } catch (error) {
